@@ -1,0 +1,44 @@
+<HTML>
+<head>
+	<link rel="stylesheet" href="Calculator.css"/>
+	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<title>
+	Calculator
+</title>
+</head>
+<body>
+	<div id="grid-container" ng-app="calculator" ng-controller="controller">
+		<input id="input" ng-model="inputbar" readonly/>
+		<button class="edge"  id="grid-item" ng-click="clearfunc()">AC</button>
+		<button class="edge" id="grid-item" ng-click="clearlast()">C</button>
+		<button class="edge" id="grid-item" ng-click="percent()">%</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick('/')">/</button>
+
+		<button class="edge" id="grid-item" ng-click="buttonclick(1)">1</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(2)">2</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(3)">3</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick('*')">*</button>
+
+		<button class="edge" id="grid-item" ng-click="buttonclick(4)">4</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(5)">5</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(6)">6</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick('-')">-</button>
+
+		<button class="edge" id="grid-item" ng-click="buttonclick(7)">7</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(8)">8</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(9)">9</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick('+')">+</button>
+
+		<button class="edge" id="grid-item" ng-click="buttonclick('.')">.</button>
+		<button class="edge" id="grid-item" ng-click="buttonclick(0)">0</button>
+		<div class="edge" id="flex-buttons">
+			<button id="bracket" ng-click="buttonclick('(')">(</button>
+			<button id="bracket" ng-click="buttonclick(')')">)</button>
+		</div>
+		<button class="edge" id="grid-item" ng-click="evaluate()">=</button>
+
+	</div>
+		<script src="calculatorcontroller.js"></script>
+</body>
+</HTML>

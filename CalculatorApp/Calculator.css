@@ -1,0 +1,79 @@
+.edge
+{	
+	outline:none;
+	border:none;
+	color:#e1e1e1;
+	font-size: 30px;
+	background-image:linear-gradient(#606577,#31343c);
+	background-attachment: fixed;
+}
+#grid-container
+{
+	border-radius:5px;
+	margin: auto auto auto auto;
+	padding:15px 20px 15px 15px;
+	display:grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-gap:2px;
+	height:500px;
+	width:300px;
+	box-shadow:4px 4px 30px black;
+	background-image:linear-gradient(#585d6d,#2e3138);
+
+}
+#grid-item:hover
+{
+	background-image: none;
+	background-color:#2e3138;
+}
+#grid-item:active
+{
+	animation-name:backgroundchange; 
+	animation-duration:0.3s;
+	animation-timing-function: linear;
+}
+@keyframes backgroundchange
+{
+	from{background-color:black; }
+	to{background-color:#000830;}
+}
+#input
+{
+	text-align: right;
+	cursor:crosshair;
+	color:#e1e1e1;
+	font-size:30px;
+	grid-row-start:span 2;
+	outline:none;
+	border:none;
+	background-color:inherit;
+	grid-column-start:0;
+	grid-column-end: span 4;
+	grid-row: 1/3;
+}
+
+#flex-buttons
+{
+	display:grid;
+	grid-template-columns: auto auto;
+}
+#bracket
+{
+	outline:none;
+	background-color: inherit;
+	border:none;
+	font-size:30px;
+	color:#e1e1e1;
+}
+#bracket:hover
+{
+	background-color:#2e3138;
+	background-color:;
+}
+#bracket:active
+{
+	border:none;
+	animation-name:backgroundchange;
+	animation-duration:0.3s;
+	animation-timing-function: linear;
+}

@@ -1,0 +1,36 @@
+var app=angular.module('calculator',[]);
+app.controller('controller',function($scope)
+{
+	$scope.inputbar="0";
+	$scope.buttonclick=function($input)
+	{
+		if($scope.inputbar=="0")
+		{
+			$scope.inputbar="";
+		}
+			$scope.inputbar=$scope.inputbar.concat($input);
+	}
+	$scope.clearfunc=function()
+	{
+		$scope.inputbar="0";
+	}
+	$scope.evaluate=function()
+	{
+		$scope.inputbar="".concat(eval($scope.inputbar));
+	}
+	$scope.percent=function()
+	{
+		$scope.inputbar="".concat(eval($scope.inputbar/100));
+	}
+	$scope.clearlast=function()
+	{
+		if($scope.inputbar.length>1)
+		{
+		$scope.inputbar=$scope.inputbar.substr(0,$scope.inputbar.length-1);
+		}
+		else
+		{
+			$scope.inputbar="0";
+		}
+	}
+});
